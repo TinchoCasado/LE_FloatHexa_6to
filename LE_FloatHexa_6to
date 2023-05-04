@@ -1,5 +1,7 @@
 #include <stdio.h>
 #define CANT 4
+#define LIM -1
+
 void conversion(void);
 
 union conversion
@@ -18,8 +20,7 @@ int main()
 void conversion(void)
 {
   printf("Ingrese un numero con coma: ");
-  scanf("%f", &hexa.fl);
+  scanf("%f", &hexa.fl);                              //Ingreso el número con coma
   printf("El número en hexadecimal es: 0x");
-  for(int x=3;x!=0;x--)printf("%.2X", hexa.hex[x]);
-  printf("%.2X", hexa.hex[0]);
+  for(int x=3;x>LIM;x--)printf("%.2X", hexa.hex[x]);  //Imprimo salida HEXA
 }
